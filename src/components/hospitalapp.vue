@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="row">
+        <div class="row mb-5">
             <div class="col-sm-12 col-md-12 col-xl-5 col-lg-5">
                 <b-alert show variant="warning">
                     <div class="d-flex justify-content-between align-items-center">
