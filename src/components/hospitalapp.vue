@@ -36,16 +36,19 @@
                     <p class="mt-1 mb-0"><strong>HN</strong> number :</p>
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6">
-                            <p class="mt-1 mb-0">อายุ :</p>
+                            <p class="mt-1 mb-0 font-m">อายุ :</p>
+                            <hr class="mt-2 mb-2">
                         </div>
                         <div class="col-sm-12 col-md-12 col-xl-6 col-lg-6">
-                            <p class="mt-1 mb-0">เพศ :</p>
+                            <p class="mt-1 mb-0 font-m">เพศ :</p>
+                            <hr class="mt-2 mb-2">
                         </div>
                     </div>
-                    <hr class="mt-2 mb-2">
-                    <p class="mt-1 mb-0">แพ้ยา :</p>
-                    <p class="mt-1 mb-0">เตียง :</p>
-                    <p class="mt-1 mb-0">สิทธิ์ :</p>
+                    <b-alert show variant="secondary">
+                        <p class="mt-1 mb-0 font-m text-danger"><strong><font-awesome-icon class="mr-2" icon="exclamation-circle" />แพ้ยา :</strong></p>
+                        <p class="mt-1 mb-0 font-m"><font-awesome-icon class="mr-2" icon="bed" />เตียง :</p>
+                        <p class="mt-1 mb-0 font-m">สิทธิ์ :</p>
+                    </b-alert>
                 </b-media>
                 <b-card no-body>
                     <b-tabs card>
@@ -228,6 +231,7 @@
                         { text:'เลือก' , value: null , disabled:true },
                         { text:'1 เม็ด วันละ 3 ครั้ง' , value: '1 เม็ด วันละ 3 ครั้ง' },
                 ],
+                visible: true
             }
         },
         methods:{}

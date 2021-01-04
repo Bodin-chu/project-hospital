@@ -2,7 +2,7 @@
   <div>
     <!-- {{ this.$route.path }} -->
     <b-navbar toggleable="md" fixed="top" class="mt-0 " type="dark" variant="dark">
-      <b-navbar-brand class="font-main" to="/">เมนู Hospital App</b-navbar-brand>
+      <b-navbar-brand class="font-main" to="/">เมนู</b-navbar-brand>
       <b-navbar-toggle target="navbar-toggle-collapse"></b-navbar-toggle>
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="font-main">

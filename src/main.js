@@ -23,7 +23,7 @@ Vue.use(IconsPlugin)
 
 // Install fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret,faLanguage, faLock, faFileSignature, faCheck, faExclamationTriangle, faTimesCircle, faCalendarDay, faMapPin, faClock, faHourglassHalf, faTable, faReply, faExternalLinkAlt, faEnvelope, faUserLock, faKey, faFilePdf, faCircle, faCheckCircle, faSquareFull, faSquare, faCheckSquare, faPrint, faSignOutAlt, faPlus, faFileExcel, faFolder, faPencilAlt, faTrash, faUser, faNotesMedical, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret,faLanguage, faLock, faFileSignature, faCheck, faExclamationTriangle, faTimesCircle, faCalendarDay, faMapPin, faClock, faHourglassHalf, faTable, faReply, faExternalLinkAlt, faEnvelope, faUserLock, faKey, faFilePdf, faCircle, faCheckCircle, faSquareFull, faSquare, faCheckSquare, faPrint, faSignOutAlt, faPlus, faFileExcel, faFolder, faPencilAlt, faTrash, faUser, faNotesMedical, faBriefcaseMedical, faBed, faExclamationCircle, faPills } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(
   faUserSecret,
@@ -34,7 +34,8 @@ library.add(
   faExclamationTriangle,
   faTimesCircle,
   faCalendarDay,faMapPin,faClock,faHourglassHalf,faTable,faReply,faExternalLinkAlt,faEnvelope,faUserLock,faKey,faFilePdf,faCircle,faCheckCircle,
-  faSquare,faCheckSquare,faPrint,faSignOutAlt,faPlus,faFileExcel,faFolder,faPencilAlt,faTrash,faUser,faNotesMedical,faBriefcaseMedical
+  faSquare,faCheckSquare,faPrint,faSignOutAlt,faPlus,faFileExcel,faFolder,faPencilAlt,faTrash,faUser,faNotesMedical,faBriefcaseMedical,faBed,
+  faExclamationCircle,faPills
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
