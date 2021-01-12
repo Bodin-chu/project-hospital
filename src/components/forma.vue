@@ -1,30 +1,29 @@
 <template>
      <div class="">
           <div class="mb-5 row">
-               <div class="col-sm-12 col-md-12 col-xl-7 col-lg-7">
+               <div class="col-sm-12 col-md-12 col-xl-9 col-lg-9">
                     <div class="d-flex justify-content-between align-items-center">
-                         <b-form-input
-                              class="font-a"
-                              style="width:50%"
-                              size="sm"
-                              id="filter-input"
-                              type="search"
-                              placeholder="ค้นหาข้อมูล 'ยา' ในตาราง"
-                              v-model="filter"
-                         ></b-form-input>
+                         <div>
+                              <label class="font-a font-weight-bold">ค้นหาข้อมูล 'ยา' ในตาราง</label>
+                              <b-form-input
+                                   class="font-a"
+                                   style="width:250%;border:1px solid #000;"
+                                   size="sm"
+                                   id="filter-input"
+                                   type="search"
+                                   v-model="filter"
+                              ></b-form-input>
+                         </div>
                          <div> 
                               <b-button-group size="sm" class="mt-1 mb-2">
                                    <b-button @click="viewFormAddMed" variant="warning" class="font-a">
                                         <font-awesome-icon class="mr-2" icon="plus" />
-                                        เพิ่มข้อมูลยา
-                                   </b-button>
-                                   <b-button @click="viewFormAddMed" variant="success" class="font-a">
-                                        <font-awesome-icon class="mr-2" icon="file-excel" />
-                                        export .xlxs
+                                        <strong>เพิ่มข้อมูลยา</strong>
                                    </b-button>
                               </b-button-group>
                          </div>
                     </div>
+                    <p class="mt-2 mb-2 font-a text-muted"><font-awesome-icon class="mr-2" icon="pills" />จำนวนข้อมูลยาในระบบทั้งหมด {{ dataMedical.length }} รายการ</p>
                     <b-table 
                          class="mt-2 font-table"
                          head-variant="dark"
@@ -41,18 +40,18 @@
                          </template>
                          <template #cell(m7)="row" align-v="center">
                               <b-button-group  vertical size="sm">
-                                   <b-button class="font-a" variant="info">อัพเดทข้อมูลยา</b-button>
+                                   <b-button class="font-a" variant="info">อัพเดท</b-button>
                                    <b-button class="font-a" variant="danger">ลบ</b-button>
                               </b-button-group>
                          </template>
                     </b-table>
                </div>
-               <div class="col-sm-12 col-md-12 col-xl-5 col-lg-5">
+               <div class="col-sm-12 col-md-12 col-xl-3 col-lg-3">
                     <b-card v-if="formMed">
                          <b-card-body>
                               <div class="d-flex justify-content-between align-items-center">
                                    <h5 class="mt-1 mb-1 font-a">
-                                        <strong><u><font-awesome-icon class="mr-2" icon="pills" />เพิ่มข้อมูลยา</u></strong>
+                                        <strong class="text-info"><font-awesome-icon class="mr-2" icon="pills" />กรอกรายละเอียดยา</strong>
                                    </h5>
                                    <b-button @click="formMed = !formMed" size="sm" variant="danger"><font-awesome-icon icon="times-circle" /></b-button>
                               </div>
@@ -88,8 +87,8 @@
                                    ></b-form-input>
                               </b-form-group>
                               <!-- 4 -->
-                              <label class="font-a"><strong>4. ขนาดยา (Strength) : Ex. 10 mg, 120 mg/ml, 10mg+15 mg</strong></label>
-                              <b-form-group>
+                              <label class="font-a"><strong>4. ขนาดยา (Strength)</strong></label>
+                              <b-form-group description="Ex. 10 mg, 120 mg/ml, 10mg+15 mg">
                                    <b-form-input
                                         v-model="formData.Strength"
                                         class="font-a"
@@ -156,22 +155,50 @@
                     filterOn: [],
                     formMed:false,
                     // table
-                         // {
-                         //      'm1': 1,
-                         //      'dataMed_1': '',
-                         //      'dataMed_2': '',
-                         //      'dataMed_3': '',
-                         //      'm4': 5,
-                         //      'm5': 'กล่อง',
-                         //      'm6': 'xxx',
-                         // }
-                    dataMedical:[],
+                    dataMedical:[
+                         {
+                              'm1': '141881',
+                              'm3': 'fluorouracil',
+                              'm31': 'EFFCIL',
+                              'm32': 'PHARMACHEMIE, NETHERLANDS',
+                              'm6': '250 mg/5 mL',
+                              'm4': 'solution for injection/infusion',
+                              'm5': 'vial',
+                         },
+                         {
+                              'm1': '141997',
+                              'm3': 'fluorouracil',
+                              'm31': 'FLUOROURACIL U.S.P. ABIC',
+                              'm32': 'BORYUNG PHARMACEUTICAL, KOREA',
+                              'm6': '250 mg/5 mL',
+                              'm4': 'solution for injection/infusion',
+                              'm5': 'vial',
+                         },
+                         {
+                              'm1': '108953',
+                              'm3': 'amlodipine + valsartan',
+                              'm31': 'EXFORGE',
+                              'm32': 'NOVARTIS PHARMA, SWITZERLAND',
+                              'm6': '5 mg + 160 mg',
+                              'm4': 'film-coated tablet',
+                              'm5': 'tab',
+                         },
+                         {
+                              'm1': '100005',
+                              'm3': 'alginic acid + dried aluminum hydroxide gel + magnesium carbonate',
+                              'm31': 'ALGYCON',
+                              'm32': 'TAI YU CHEMICAL & PHARMACEUTICAL, TAIWAN',
+                              'm6': '200 mg + 30 mg + 40 mg',
+                              'm4': 'chewable tablet',
+                              'm5': 'tab',
+                         },
+                    ],
                     fields: [
                          {
                               key: 'm1',
-                              label:'รหัสยา',
+                              label:'รหัส',
                               sortable: true,
-                              class:'text-center w-15'
+                              class:'text-center w-5 font-weight-bold'
                          },
                          {
                               key: 'm3',
